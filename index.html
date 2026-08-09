@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>e-RDV Burundi - Inscription patient</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-icon">+</span>
+      <span class="logo-text">e-RDV Burundi</span>
+    </div>
+    <div class="lang-switch">
+      <a href="#">FR</a>
+      <span>|</span>
+      <a href="#">KI</a>
+    </div>
+  </header>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <div class="page-container">
+
+    <!-- ===== BARRE LATERALE ===== -->
+    <aside class="sidebar">
+      <nav class="steps-nav">
+        <a href="#section1" class="step active">
+          <span class="step-number">1</span>
+          <span class="step-label">Informations personnelles</span>
+        </a>
+        <a href="#section2" class="step">
+          <span class="step-number">2</span>
+          <span class="step-label">Documents d'identité</span>
+        </a>
+        <a href="#section3" class="step">
+          <span class="step-number">3</span>
+          <span class="step-label">Situation familiale</span>
+        </a>
+        <a href="#section4" class="step">
+          <span class="step-number">4</span>
+          <span class="step-label">Personnes à charge</span>
+        </a>
+        <a href="#section5" class="step">
+          <span class="step-number">5</span>
+          <span class="step-label">Assurance / Mutuelle</span>
+        </a>
+        <a href="#section6" class="step">
+          <span class="step-number">6</span>
+          <span class="step-label">Confirmation</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ===== FORMULAIRE ===== -->
+    <main class="form-area">
+
+      <h1 class="page-title">Inscription patient</h1>
+      <p class="page-subtitle">Créez votre compte pour prendre rendez-vous facilement</p>
+
+      <!-- SECTION 1 -->
+      <section id="section1" class="form-card">
+        <h2>1. Informations personnelles</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nom *</label>
+            <input type="text" placeholder="Entrez votre nom">
+          </div>
+          <div class="form-group">
+            <label>Prénom *</label>
+            <input type="text" placeholder="Entrez votre prénom">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Âge *</label>
+            <input type="number" placeholder="Entrez votre âge">
+          </div>
+          <div class="form-group">
+            <label>Date de naissance</label>
+            <input type="date">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Numéro de téléphone *</label>
+          <input type="tel" placeholder="+257  79 123 456">
+        </div>
+
+        <div class="form-group">
+          <label>Adresse complète *</label>
+          <textarea placeholder="Entrez votre adresse complète (quartier, avenue, numéro de maison...)"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Groupe sanguin *</label>
+            <select>
+              <option>Sélectionnez votre groupe</option>
+              <option>A+</option>
+              <option>A-</option>
+              <option>B+</option>
+              <option>B-</option>
+              <option>O+</option>
+              <option>O-</option>
+            </select>
+          </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section id="section2" class="form-card">
+        <h2>2. Documents d'identité</h2>
+
+        <label>Type de document *</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="document" checked>
+            Carte Nationale d'identité (CNI)
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="document">
+            Passeport
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="document">
+            Extrait d'acte de naissance (pour enfant)
+          </label>
+        </div>
+
+        <label for="document-file">Document (photo ou scan) *</label>
+        <label for="document-file" class="upload-box">
+          <input type="file" id="document-file" name="document" accept=".jpg,.jpeg,.png,.pdf" class="upload-input">
+          <p class="upload-text">Cliquez pour télécharger ou glissez-déposez</p>
+          <p class="upload-hint">Formats acceptés : JPG, PNG, PDF (Max 5 Mo)</p>
+          <p class="file-name"></p>
+          <img class="file-preview" alt="Aperçu du document">
+        </label>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section id="section3" class="form-card">
+        <h2>3. Situation familiale</h2>
+
+        <label>Statut matrimonial *</label>
+        <div class="status-cards">
+          <label class="status-card">
+            <input type="radio" name="statut">
+            <strong>Célibataire</strong>
+            <span>Vous êtes actuellement célibataire</span>
+          </label>
+          <label class="status-card">
+            <input type="radio" name="statut">
+            <strong>Marié(e)</strong>
+            <span>Vous êtes marié(e)</span>
+          </label>
+          <label class="status-card">
+            <input type="radio" name="statut">
+            <strong>Divorcé(e)</strong>
+            <span>Vous êtes divorcé(e)</span>
+          </label>
+          <label class="status-card">
+            <input type="radio" name="statut">
+            <strong>Veuf(ve)</strong>
+            <span>Vous êtes veuf(ve)</span>
+          </label>
+        </div>
+
+        <p class="info-box warning">
+          Si vous êtes célibataire mais que vous avez des enfants dont vous avez la charge, vous pourrez les ajouter à l'étape suivante.
+        </p>
+      </section>
+
+      <!-- SECTION 4 -->
+      <section id="section4" class="form-card">
+        <h2>4. Personnes à charge</h2>
+        <p class="section-desc">Ajoutez ici les personnes que vous prenez en charge (conjoint(e), enfants, etc.)</p>
+
+        <div class="empty-state">
+          <p class="empty-title">Aucune personne à charge ajoutée</p>
+          <p class="empty-desc">Vous pourrez ajouter les personnes à votre charge à l'étape suivante.</p>
+           <a href="personne.html" class="btn-secondary">+ Ajouter une personne à charge</a>
+        </div>
+      </section>
+
+      <!-- SECTION 5 -->
+      <section id="section5" class="form-card">
+        <h2>5. Assurance / Mutuelle</h2>
+        <p class="section-desc">Vous n'avez pas de carte d'assurance ni de mutuelle ? Vous pourrez confirmer et enregistrer vos informations.</p>
+        <a href="assurance.html" class="btn-secondary">Enregistrer une assurance / mutuelle</a>
+      </section>
+
+      <!-- SECTION 6 -->
+      <section id="section6" class="form-card">
+        <h2>6. Confirmation</h2>
+        <p class="section-desc">Vérifiez vos informations avant de valider votre inscription.</p>
+      </section>
+
+      <div class="form-nav">
+        <button type="button" class="btn-outline">← Précédent</button>
+        <button type="button" class="btn-primary">Suivant →</button>
+      </div>
+
+      <p class="footer-note">
+        🔒 Vos informations sont sécurisées et confidentielles. Elles ne seront utilisées que dans le cadre de la prise de rendez-vous médicaux.
+      </p>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
